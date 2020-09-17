@@ -18,27 +18,31 @@
             android:id="@+id/buttonAlert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="goToAlert"
             android:text="Create An Alert"
-            app:layout_constraintBottom_toTopOf="@id/buttonWorks"
+            app:layout_constraintBottom_toTopOf="@+id/buttonWorks"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias=".50" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/buttonWorks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="144dp"
-            android:layout_marginLeft="144dp"
-            android:layout_marginEnd="144dp"
-            android:layout_marginRight="144dp"
-            android:layout_marginBottom="156dp"
+            android:layout_marginBottom="153dp"
             android:text="How it works"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="205dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
