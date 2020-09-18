@@ -11,25 +11,39 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="138dp">
 
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="117dp"
+            android:layout_marginLeft="117dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="57dp"
+            android:layout_marginRight="57dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTime"
+            app:layout_constraintTop_toBottomOf="@+id/Distance" />
 
         <EditText
             android:id="@+id/Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="167dp"
-            android:layout_marginRight="167dp"
-            android:layout_marginBottom="35dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="164dp"
+            android:layout_marginRight="164dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name"
-            app:layout_constraintBottom_toTopOf="@+id/Description"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,74 +51,96 @@
             android:id="@+id/Description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginEnd="165dp"
-            android:layout_marginRight="165dp"
-            android:layout_marginBottom="35dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="164dp"
+            android:layout_marginRight="164dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Description"
-            app:layout_constraintBottom_toTopOf="@+id/Time"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/Date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginEnd="166dp"
-            android:layout_marginRight="166dp"
-            android:layout_marginBottom="35dp"
-            android:ems="10"
-            android:inputType="date"
-            android:text="Date"
-            app:layout_constraintBottom_toTopOf="@+id/Distance"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/Time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginEnd="165dp"
-            android:layout_marginRight="165dp"
-            android:layout_marginBottom="35dp"
-            android:ems="10"
-            android:inputType="time"
-            app:layout_constraintBottom_toTopOf="@+id/Date"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="Time" />
+            app:layout_constraintTop_toBottomOf="@+id/Name" />
 
         <EditText
             android:id="@+id/Distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginEnd="165dp"
-            android:layout_marginRight="165dp"
-            android:layout_marginBottom="117dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="164dp"
+            android:layout_marginRight="164dp"
             android:ems="10"
             android:inputType="number"
             android:text="Distance"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Description" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="36dp" />
+            app:layout_constraintGuide_begin="29dp" />
+
+        <Button
+            android:id="@+id/buttonDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:text="Pick Date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+        <Button
+            android:id="@+id/buttonTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="124dp"
+            android:layout_marginRight="124dp"
+            android:onClick="showTimePickerDialog"
+            android:text="pick_time"
+            app:layout_constraintEnd_toStartOf="@+id/buttonDate"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTime" />
+
+        <Button
+            android:id="@+id/buttonCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:layout_marginLeft="145dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="146dp"
+            android:layout_marginRight="146dp"
+            android:layout_marginBottom="68dp"
+            android:text="Create Alert"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonTime" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="55dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Distance" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
