@@ -1,18 +1,31 @@
 package com.MichaelC.alerted
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import java.sql.Time
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
-class Alert {
+public class Alert {
 
     var id: Int
     var alertName: String
     var location: Double
     var description: String
-    var time: Time
+    var time: Date
     var date: Date
 
-    constructor(id: Int,alertName: String,location: Double,description: String,time: Time,date: Date) {
+    constructor(
+        id: Int,
+        alertName: String,
+        location: Double,
+        description: String,
+        time: Date,
+        date: Date
+    ) {
         this.id = id
         this.alertName = alertName
         this.location = location
@@ -20,4 +33,10 @@ class Alert {
         this.time = time
         this.date = date
     }
+
+
+
+
+
+
 }
